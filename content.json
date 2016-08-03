@@ -1,8 +1,4 @@
 {
-	"time_per_question": "0",
-	"difficulty": "0",
-	"randomize": false,
-	"hide_feedback": false,
 	"title": "Quiz title",
 	"details": "Quiz details: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia sodales convallis. Suspendisse pharetra quam ex, vel interdum arcu elementum quis. Phasellus maximus purus ac lectus sodales interdum. Curabitur eu consequat nisi. Sed non arcu sed elit vehicula facilisis vel et purus. Proin sodales efficitur lacus feugiat auctor.",
 	"challenges": [{
