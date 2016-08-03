@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="contentApp">
+<head>
+	<meta charset="utf-8">
+	<title>Angular Quiz Viewer</title>
+	
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="./css/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container col-xs-12 main-container" ng-controller="ContentDisplayController">
+        <div class="panel panel-primary" ng-if="loaded">
+        	<div class="panel-heading">
+        		<h2 class="panel-title">{{quiz.title}}</h2>
+        	</div>
+        	<div class="panel-body" ng-bind-html="quiz.details | sanitizeHTML" ng-if="quiz.details"></div>
+			<div class="panel-body" ng-repeat="challenge in quiz.challenges" ng-init="pIndex = $index">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title pull-left question-title">Question {{$index+1}}</h3>
+						<button class="btn btn-sm btn-info glyphicon glyphicon-picture pull-right question-header-btn" title="Toggle image" ng-if="challenge.question_img" type="button" data-toggle="collapse" data-target="#question-img-{{$index}}" aria-expanded="false" aria-controls="question-img-{{$index}}"></button>
+						<div class="clearfix"></div>
+					</div>
+					<div class="panel-body">
+						<p>{{challenge.question}}</p>
+						<div class="collapse" id="question-img-{{$index}}" ng-if="challenge.question_img">
+							<img class="question-img" ng-src="{{challenge.question_img | sanitizeURL}}" />
+						</div>
+						<div ng-repeat="item in challenge.items" class="panel" ng-class="{'panel-success' : item.right_answer, 'panel-default' : !item.right_answer}">
+							<div class="panel-heading">
+								<h4 class="panel-title pull-left item-title">{{letters[$index]}}</h4>
+								<span class="glyphicon glyphicon-ok correct-icon" ng-if="item.right_answer"></span>
+								<button class="btn btn-xs btn-primary glyphicon glyphicon-picture pull-right" title="Toggle image" ng-if="item.item_img" type="button" data-toggle="collapse" data-target="#item-img-{{pIndex}}-{{$index}}" aria-expanded="false" aria-controls="item-img-{{pIndex}}-{{$index}}"></button>
+								<div class="clearfix"></div>
+							</div>
+							<div class="panel-body">
+								<p>{{item.item_txt}}</p>
+								<div class="collapse" id="item-img-{{pIndex}}-{{$index}}" ng-if="item.item_img">
+									<img class="item-img" ng-src="{{item.item_img | sanitizeURL}}" />
+								</div>
+							</div>
+						</div>
+						<div>
+							<button type="button" class="btn btn-success pull-right" ng-if="challenge.question_info" title="Toggle explanation" aria-hidden="true" data-toggle="collapse" data-target="#resolucao-{{$index}}" aria-expanded="false" aria-controls="resolucao-{{$index}}">
+								More info <span class="glyphicon glyphicon-check"></span>
+							</button>
+							<div class="clearfix"></div>
+							<div id="resolucao-{{$index}}" class="panel panel-success collapse info-panel" ng-if="challenge.question_info">
+								<div class="panel-body" ng-bind-html="challenge.question_info | sanitizeHTML"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    
+	<!-- SCRIPTS -->
+	<script src="//code.angularjs.org/1.5.0/angular.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="./js/app.js"></script>
+</body>
+</html>

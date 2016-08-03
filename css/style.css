@@ -1,0 +1,22 @@
+.main-container{
+	margin-top: 15px;
+}
+.question-title{
+	padding-top: 4px;
+}
+.question-header-btn{
+    height: 26px;
+	padding: 0 13px;
+}
+.item-title{
+	padding-top: 3px;
+}
+.question-img,
+.item-img {
+	max-width: 300px;
+	max-height: 300px;
+}
+.question-img {	margin-bottom: 15px; }
+.item-img { margin-top: 15px; }
+.correct-icon { margin-left: 10px; }
+.info-panel { margin-top: 10px; }

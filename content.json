@@ -1,0 +1,51 @@
+{
+	"time_per_question": "0",
+	"difficulty": "0",
+	"randomize": false,
+	"hide_feedback": false,
+	"title": "Quiz title",
+	"details": "Quiz details: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia sodales convallis. Suspendisse pharetra quam ex, vel interdum arcu elementum quis. Phasellus maximus purus ac lectus sodales interdum. Curabitur eu consequat nisi. Sed non arcu sed elit vehicula facilisis vel et purus. Proin sodales efficitur lacus feugiat auctor.",
+	"challenges": [{
+		"question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia sodales convallis. Suspendisse pharetra quam ex, vel interdum arcu elementum quis. Phasellus maximus purus ac lectus sodales interdum. Curabitur eu consequat nisi. Sed non arcu sed elit vehicula facilisis vel et purus. Proin sodales efficitur lacus feugiat auctor. Suspendisse ac nisi leo. Nunc dapibus non elit eget varius. Suspendisse imperdiet faucibus bibendum. Vivamus pulvinar congue lacinia.",
+		"question_img": "http://lorempixel.com/400/350/",
+		"items": [{
+			"item_txt": "Correct answer",
+			"item_img": "",
+			"right_answer": true
+		}, {
+			"item_txt": "Wrong answer 1",
+			"item_img": "",
+			"right_answer": false
+		}, {
+			"item_txt": "Wrong answer 2",
+			"item_img": "",
+			"right_answer": false
+		}, {
+			"item_txt": "Wrong answer 2",
+			"item_img": "",
+			"right_answer": false
+		}],
+		"question_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia sodales convallis. Suspendisse pharetra quam ex, vel interdum arcu elementum quis. Phasellus maximus purus ac lectus sodales interdum. Curabitur eu consequat nisi. Sed non arcu sed elit vehicula facilisis vel et purus. Proin sodales efficitur lacus feugiat auctor."
+	},{
+		"question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia sodales convallis. Suspendisse pharetra quam ex, vel interdum arcu elementum quis. Phasellus maximus purus ac lectus sodales interdum. Curabitur eu consequat nisi. Sed non arcu sed elit vehicula facilisis vel et purus. Proin sodales efficitur lacus feugiat auctor. Suspendisse ac nisi leo. Nunc dapibus non elit eget varius. Suspendisse imperdiet faucibus bibendum. Vivamus pulvinar congue lacinia.",
+		"question_img": "http://lorempixel.com/450/300/",
+		"items": [{
+			"item_txt": "Wrong answer 1",
+			"item_img": "http://lorempixel.com/400/400/",
+			"right_answer": false
+		}, {
+			"item_txt": "Correct answer",
+			"item_img": "http://lorempixel.com/400/450/",
+			"right_answer": true
+		}, {
+			"item_txt": "Wrong answer 2",
+			"item_img": "http://lorempixel.com/500/400/",
+			"right_answer": false
+		},{
+			"item_txt": "Wrong answer 3",
+			"item_img": "http://lorempixel.com/800/600/",
+			"right_answer": false
+		}],
+		"question_info": ""
+	}]
+}
